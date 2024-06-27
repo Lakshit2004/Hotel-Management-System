@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container {
+    background: white;
+    padding: 4rem; /* Spacious padding */
+    border-radius: 12px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow effect */
+    width: 90%; /* Wider container */
+    max-width: 1400px; /* Maximum width */
+}
+
+main h2 {
+    font-weight: 700;
+    font-size: 2.5rem; /* Bigger font */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.room-list {
+    display: flex;
+    justify-content: space-between; /* Ensure equal space between rooms */
+    gap: 2rem; /* Increased gap between cards */
+}
+
+.room-card {
+    flex: 1; /* Equal distribution */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    text-align: center;
+    padding-bottom: 1.5rem; /* Increased height */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth hover effect */
+    position: relative;
+    border: 2px solid transparent; /* Default border */
+}
+
+.room-card input[type="radio"] {
+    position: absolute;
+    opacity: 0; /* Radio button is invisible but still functional */
+    height: 100%; /* Clickable throughout the card */
+    width: 100%; /* Clickable throughout the card */
+}
+
+.room-card img {
+    border-radius: 12px 12px 0 0; /* Rounded top corners */
+    width: 100%; /* Covers entire card */
+    height: 250px; /* Increased height */
+    object-fit: cover; /* Maintains aspect ratio */
+}
+
+.room-card .room-details {
+    padding: 1.5rem; /* Padding for details */
+}
+
+.room-card h3 {
+    font-weight: 700;
+    font-size: 1.8rem; /* Larger font */
+}
+
+.room-card p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem; /* Slightly larger font */
+}
+
+.room-card:hover {
+    box-shadow: 12px 12px 40px rgba(0, 0, 0, 0.5); /* Enhanced hover effect */
+}   
+
+.room-card input[type="radio"]:checked + .room-card {
+    border: 3px solid #8e2de2; /* Highlighted border when selected */
+    background: rgba(142, 45, 226, 0.1); /* Slight background change */
+}
+
+.date-fields {
+    display: flex;
+    justify-content: space-between; /* Horizontal alignment of date fields */
+    margin-top: 2.5rem;
+}
+
+.input-field {
+    position: relative;
+    width: 45%; /* Ensures equal distribution of space */
+}
+
+.input-field span {
+    font-size: 1.3rem; /* Larger font for label */
+}
+
+.input-field input[type="date"] {
+    padding: 0.5rem; /* Comfortable padding */
+    width: 100%; /* Full width */
+    outline: none;
+    font-size: 1.2rem;
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid rgba(0, 0, 0, 0.3); /* Light border */
+}
+
+form input[type="submit"].book-now-button {
+    margin-top: 2.5rem; /* Space between date fields and button */
+    padding: 1rem; /* Larger padding */
+    background: #8e2de2; /* Purple button */
+    cursor: pointer;
+    color: white;
+    font-size: 1.3rem; /* Larger font */
+    font-weight: 600;
+    border-radius: 7px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth hover effect */    
+}
+
+form input[type="submit"].book-now-button:hover {
+    background: linear-gradient(to right, #4776E6, #8e54e9); /* Hover effect */
+}

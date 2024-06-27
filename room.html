@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="room.css">
+    <title>Available Rooms</title>
+</head>
+<body>
+    <main class="container">
+        <!-- Title -->
+        <h2>Select a Room</h2>
+
+        <!-- Available Rooms -->
+        <form action="book_room.php" method="post" class="room-form">
+            <div class="room-list">
+                <!-- Room 1 -->
+                <label class="room-card" for="room1">
+                    <input type="radio" name="room" id="room1" value="Deluxe Room" required>
+                    <img src="room1.jpg" alt="Deluxe Room" class="room-image">
+                    <div class="room-details">
+                        <h3>Deluxe Room</h3>
+                        <p>Cost: $200/night</p>
+                        <p>Bed: King-size</p>
+                    </div>
+                </label>
+
+                <!-- Room 2 -->
+                <label class="room-card" for="room2">
+                    <input type="radio" name="room" id="room2" value="Suite Room" required>
+                    <img src="room2.jpg" alt="Suite Room" class="room-image">
+                    <div class="room-details">
+                        <h3>Suite Room</h3>
+                        <p>Cost: $300/night</p>
+                        <p>Bed: Queen-size</p>
+                    </div>
+                </label>
+
+                <!-- Room 3 -->
+                <label class="room-card" for="room3">
+                    <input type="radio" name="room" id="room3" value="Standard Room" required>
+                    <img src="room3.jpg" alt="Standard Room" class="room-image">
+                    <div class="room-details">
+                        <h3>Standard Room</h3>
+                        <p>Cost: $100/night</p>
+                        <p>Bed: Single</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Date Fields -->
+            <div class="date-fields">
+                <label class="input-field" for="check-in">
+                    <span>Check-In</span>
+                    <input type="date" name="check_in" id="check-in" required>
+                </label>
+
+                <label class="input-field" for="check-out">
+                    <span>Check-Out</span>
+                    <input type="date" name="check_out" id="check-out" required>
+                </label>
+            </div>
+
+            <!-- Book Now Button -->
+            <input type="submit" value="Book Now" class="book-now-button">
+        </form>
+    </main>
+</body>
+</html>
